@@ -27,7 +27,7 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/deletar/:id',(req,res)=>{
-    tarefas = tarefas.filter((val,index)=>{ // fazendo um clone da variavvel 'tarefas'
+    tarefas = tarefas.filter((val,index)=>{ // fazendo um clone da variavel 'tarefas'
         if (index != req.params.id){ // fazendo essa validação
             return val; // irá retornar apenas os valores, nao o id;
         }
@@ -36,6 +36,5 @@ app.get('/deletar/:id',(req,res)=>{
 })
 
 app.listen(5000,()=>{ //5000 é a porta 
-    
     console.log('Server rodando!');
 })
